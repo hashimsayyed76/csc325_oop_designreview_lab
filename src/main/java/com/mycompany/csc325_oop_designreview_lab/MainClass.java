@@ -10,35 +10,30 @@ package com.mycompany.csc325_oop_designreview_lab;
  */
 public class MainClass {
 
- public static void main(String[] args) {
-		// ToDo 5: Fix the error
+	public static void main(String[] args) {
+        // Initialize the Scanner for user input
+        Scanner scanner = new Scanner(System.in);
 
-		// ToDo 6: Fix the constructor of the Student class
+        // Creating a Student object
+        Student std1 = new Student("James", 20);
+        System.out.println(std1); // Display initial student information
 
-                // Todo 7: Create two classes for Freshman and Senior 
+        // Creating a Freshman object (corrected constructor usage)
+        Freshman freshman = new Freshman("Alice", 18);
+        System.out.println(freshman); // Display freshman information
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+        // Creating a Senior object with at least 85 credits
+        Senior senior = new Senior("John", 30, 90);
+        System.out.println(senior); // Display senior information
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
+        // ToDo 12: Set the GPA of the freshman using Scanner input
+        System.out.print("Enter GPA for the freshman: ");
+        double gpa = scanner.nextDouble();
+        freshman.setGpa(gpa); // Setting the GPA
+        System.out.println("Updated Freshman: " + freshman); // Display updated information
 
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
+        // Closing the scanner to prevent resource leaks
+        scanner.close();
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
-
-	}
-
-}
-
+        // ToDo 13: Additional comments explaining the code are included above.
+    }
